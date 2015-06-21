@@ -1,0 +1,34 @@
+Data Products Course Project
+========================================================
+author: RAMDE ZAKAYA
+date: `r date()`
+
+Introduction 
+========================================================
+
+This project is based on mtcars datasets. Inspiring of regression models course project, where we're fitting several models to choose the best regarding residuals test. 
+As results show, on my case, mpg ~ cyl+ am+ disp+ hp+ wt was the best, and wt the significant varriable. 
+
+So, on this slidify work, it's to predict the mpg value based on wt given value. 
+The estimation model is: 
+
+**mpg ~ wt.** 
+
+Specification (1) 
+========================================================
+
+```{r, echo=FALSE}
+library(datasets)
+data(mtcars)
+fit <- lm(mpg ~ wt+disp+am+hp+cyl, data=mtcars)
+summary(fit)
+```
+
+Specification (2)
+========================================================
+
+As it is shown on previous slide, intercept and weight variable are significants. So, we try to build a simple specification of prediction of mpg based on some given value of weight (wt).
+
+Conclusion
+====================================================
+The given specification permit us to build an prediction model of mpg based on weight value.  
